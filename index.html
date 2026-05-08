@@ -318,11 +318,105 @@
   .c-grey   { color: var(--grey); }
   .c-white  { color: var(--white); }
 
-  @media (max-width: 600px) {
-    .groups { grid-template-columns: 1fr 1fr; }
+  /* ─── MOBILE ─── */
+  @media (max-width: 640px) {
+
+    /* Layout */
+    .wrapper { padding: 12px; }
+    body { padding: 0; }
+
+    /* Header */
+    h1 { font-size: 28px; letter-spacing: 0; }
+    .kicker { font-size: 9px; letter-spacing: 2px; }
+    .header-sub { font-size: 9px; letter-spacing: 1px; }
+
+    /* Language bar */
+    .lang-bar { justify-content: center; gap: 5px; margin-bottom: 18px; }
+    .lang-btn { font-size: 10px; padding: 5px 9px; letter-spacing: 0.5px; }
+
+    /* Power group cards: 2×2 grid */
+    .groups { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .group-card { padding: 10px 8px; }
+    .group-card .dot { font-size: 18px; }
+    .group-card .power { font-size: 15px; }
+    .group-card .role { font-size: 9.5px; }
+
+    /* Section headings */
+    h2 { font-size: 10px; letter-spacing: 2px; margin-top: 20px; margin-bottom: 10px; }
+
+    /* Stage headers */
+    .stage-header { padding: 10px 12px; gap: 8px; flex-wrap: wrap; }
+    .stage-title { font-size: 15px; }
+    .stage-badge { font-size: 10px; }
+    .stage-body { padding: 10px 12px; }
+
+    /* Assignment rows: stack on mobile */
+    .assignment {
+      display: grid;
+      grid-template-columns: 12px 1fr;
+      grid-template-rows: auto auto;
+      column-gap: 8px;
+      row-gap: 2px;
+      padding: 10px 0;
+    }
+    .a-dot {
+      grid-column: 1;
+      grid-row: 1;
+      margin-top: 5px;
+    }
+    .a-building {
+      grid-column: 2;
+      grid-row: 1;
+      min-width: unset;
+      font-size: 14px;
+    }
+    .a-badge {
+      grid-column: 2;
+      grid-row: 2;
+      font-size: 9px;
+      align-self: start;
+    }
+    .a-note {
+      grid-column: 1 / -1;
+      font-size: 12px;
+      padding-top: 4px;
+    }
+
+    /* Rules grid: single column */
     .rules-grid { grid-template-columns: 1fr; }
-    h1 { font-size: 32px; }
-    .a-building { min-width: 120px; }
+    .rule-card { padding: 10px 12px; }
+    .rule-num { font-size: 10px; }
+    .rule-text { font-size: 12px; }
+
+    /* Alerts */
+    .alert { padding: 12px; gap: 10px; }
+    .alert-icon { font-size: 18px; }
+    .alert-body { font-size: 12px; }
+    .alert-body strong { font-size: 13.5px; }
+
+    /* Fallback */
+    .fallback { padding: 14px; }
+    .fallback h3 { font-size: 14px; }
+    .fallback p { font-size: 12px; }
+    .fallback ul { padding-left: 14px; }
+    .fallback li { font-size: 12px; }
+
+    /* Tips */
+    .tips-list li { font-size: 12px; padding: 9px 0; }
+
+    /* Map iframes */
+    iframe {
+      height: 260px !important;
+    }
+
+    /* Map section labels */
+    [data-i18n="map_stage1_label"],
+    [data-i18n="map_stage2_label"] {
+      font-size: 10px;
+    }
+
+    /* Footer */
+    .footer { font-size: 9px; padding: 14px; letter-spacing: 0.5px; }
   }
 
   /* ─── LANGUAGE SWITCHER ─── */
@@ -583,7 +677,7 @@
 
 
 </body>
-</html>" style="width:100%;height:680px;border:none;border-radius:10px;display:block;" scrolling="no"></iframe>
+</html>" style="width:100%;height:680px;border:none;border-radius:10px;display:block;max-width:100%;" scrolling="no"></iframe>
   </div>
   <div class="stage" style="margin-bottom:32px;">
     <div class="stage-header">
@@ -900,7 +994,7 @@
 </div>
 
 </body>
-</html>" style="width:100%;height:680px;border:none;border-radius:10px;display:block;" scrolling="no"></iframe>
+</html>" style="width:100%;height:680px;border:none;border-radius:10px;display:block;max-width:100%;" scrolling="no"></iframe>
   </div>
   <div class="stage" style="margin-bottom:32px;">
     <div class="stage-header">
